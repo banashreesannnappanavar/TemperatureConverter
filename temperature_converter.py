@@ -10,11 +10,16 @@ def c_to_k(celsius):
     return celsius + 273.15
 
 
+def k_to_c(kelvin):
+    return kelvin - 273.15
+
+
 def main():
     print("===== TEMPERATURE CONVERTER =====")
     print("1. Celsius to Fahrenheit")
     print("2. Fahrenheit to Celsius")
     print("3. Celsius to Kelvin")
+    print("4. Kelvin to Celsius")
 
     choice = input("Enter your choice: ")
 
@@ -29,6 +34,10 @@ def main():
     elif choice == "3":
         celsius = float(input("Enter Celsius: "))
         print("Kelvin:", c_to_k(celsius))
+
+    elif choice == "4":
+        kelvin = float(input("Enter Kelvin: "))
+        print("Celsius:", k_to_c(kelvin))
 
     else:
         print("Invalid choice")
